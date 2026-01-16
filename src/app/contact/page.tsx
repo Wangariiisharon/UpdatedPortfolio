@@ -1,160 +1,239 @@
-export default function Example() {
+"use client";
+import React, { useState } from "react";
+import socialLinks from "../resources";
+import { MapPin, Clock, Copy, Check } from "lucide-react";
+
+export default function Contact() {
+  const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("mwangiiisharon@gmail.com");
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
   return (
-    <div className=" px-6 py-24 sm:py-32 lg:px-8">
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-      >
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30"
-        />
+    <div className="min-h-screen  bg-[#0D1117] text-gray-100 border border-gray-800 ">
+      {/* Header */}
+      <div className="border-b border-gray-800 bg-[#010409] ">
+        <div className="max-w-7xl mx-auto px-6 py-8">
+          <h1 className="text-3xl font-bold mb-2">Get In Touch</h1>
+          <p className="text-gray-400">
+            Let&apos;s connect! Feel free to reach out through any of these
+            platforms
+          </p>
+        </div>
       </div>
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-          Contact sales
-        </h2>
-        <p className="mt-2 text-lg/8 text-gray-400">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
-        </p>
-      </div>
-      <form action="#" method="POST" className=" max-w-xl sm:mt-20">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mt-20">
-          <div className="mt-6">
-            <label
-              htmlFor="first-name"
-              className="block text-sm/6 font-semibold text-white"
-            >
-              First name
-            </label>
-            <div className="mt-4">
-              <input
-                id="first-name"
-                name="first-name"
-                type="text"
-                autoComplete="given-name"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white border  border-1 border-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-              />
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        {/* Availability Banner */}
+        <div className="mb-12 bg-gradient-to-r from-green-900/30 to-emerald-900/30 border border-green-800/50 rounded-lg p-6">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0">
+              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mt-1"></div>
             </div>
-          </div>
-          <div className="mt-4">
-            <label
-              htmlFor="last-name"
-              className="block text-sm/6 font-semibold text-white"
-            >
-              Last name
-            </label>
-            <div className="mt-4">
-              <input
-                id="last-name"
-                name="last-name"
-                type="text"
-                autoComplete="family-name"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white border  border-1 border-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2 mt-4">
-            <label
-              htmlFor="company"
-              className="block text-sm/6 font-semibold text-white"
-            >
-              Company
-            </label>
-            <div className="mt-4">
-              <input
-                id="company"
-                name="company"
-                type="text"
-                autoComplete="organization"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white border  border-1 border-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2 mt-4">
-            <label
-              htmlFor="email"
-              className="block text-sm/6 font-semibold text-white"
-            >
-              Email
-            </label>
-            <div className="mt-4">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white border  border-1 border-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2 mt-4">
-            <label
-              htmlFor="phone-number"
-              className="block text-sm/6 font-semibold text-white"
-            >
-              Phone number
-            </label>
-            <div className="mt-4">
-              <input
-                id="phone-number"
-                name="phone-number"
-                type="text"
-                placeholder=""
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white border  border-1 border-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2 mt-4">
-            <label
-              htmlFor="message"
-              className="block text-sm/6 font-semibold text-white"
-            >
-              Message
-            </label>
-            <div className="mt-4">
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white border  border-1 border-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-                defaultValue={""}
-              />
-            </div>
-          </div>
-          <div className="flex gap-x-4 sm:col-span-2">
-            <div className="flex h-6 items-center">
-              <div className="group relative inline-flex w-8 shrink-0 rounded-full bg-white/5 p-px inset-ring inset-ring-white/10 outline-offset-2 outline-indigo-500 transition-colors duration-200 ease-in-out has-checked:bg-indigo-500 has-focus-visible:outline-2">
-                <span className="size-4 rounded-full bg-white shadow-xs ring-1 ring-gray-900/5 transition-transform duration-200 ease-in-out group-has-checked:translate-x-3.5" />
-                <input
-                  id="agree-to-policies"
-                  name="agree-to-policies"
-                  type="checkbox"
-                  aria-label="Agree to policies"
-                  className="absolute inset-0 size-full appearance-none focus:outline-hidden"
-                />
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-green-400 mb-1">
+                Available for Opportunities
+              </h3>
+              <p className="text-gray-300 mb-3">
+                I&apos;m currently open to new full-stack development roles,
+                Front-end roles, freelance projects, and collaborations.
+              </p>
+              <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-green-400" />
+                  <span>Nairobi, Kenya (Remote Available)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-green-400" />
+                  <span>EAT (UTC+3)</span>
+                </div>
               </div>
             </div>
-            <label
-              htmlFor="agree-to-policies"
-              className="text-sm/6 text-gray-400 mt-4"
-            >
-              By selecting this, you agree to our privacy policy.
-            </label>
           </div>
         </div>
-        <div className=" flex justify-center">
-          <button
-            type="submit"
-            className="block rounded-md bg-pink-500 px-4 py-3 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-          >
-            Let&apos;s talk
-          </button>
+
+        {/* Social Links Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {socialLinks.map((link, index) => {
+            const Icon = link.icon;
+            return (
+              <a
+                key={index}
+                href={link.url}
+                target={link.url.startsWith("http") ? "_blank" : "_self"}
+                rel={link.url.startsWith("http") ? "noopener noreferrer" : ""}
+                className={`group relative border border-gray-800 rounded-lg bg-[#010409] ${link.hoverColor} transition-all hover:shadow-lg overflow-hidden`}
+                onClick={(e) => {
+                  if (link.copyable) {
+                    e.preventDefault();
+                    handleCopyEmail();
+                  }
+                }}
+              >
+                <div className={`h-2 bg-gradient-to-r ${link.color}`} />
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div
+                      className={`p-3 rounded-lg bg-gradient-to-br ${link.color} bg-opacity-10`}
+                    >
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    {link.copyable && (
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          handleCopyEmail();
+                        }}
+                        className="p-2 hover:bg-gray-800 rounded transition-colors"
+                      >
+                        {copiedEmail ? (
+                          <Check className="w-4 h-4 text-green-400" />
+                        ) : (
+                          <Copy className="w-4 h-4 text-gray-400" />
+                        )}
+                      </button>
+                    )}
+                  </div>
+
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-orange-400 transition-colors">
+                    {link.name}
+                  </h3>
+
+                  <p className="text-gray-400 text-sm mb-3 font-mono">
+                    {link.handle}
+                  </p>
+
+                  <p className="text-gray-500 text-sm mb-3">
+                    {link.description}
+                  </p>
+
+                  <div className="flex items-center justify-between pt-3 border-t border-gray-800">
+                    <span className="text-xs text-gray-600">{link.stats}</span>
+                    <span className="text-xs text-gray-600 group-hover:text-orange-400 transition-colors">
+                      {link.copyable ? "Click to copy →" : "Visit →"}
+                    </span>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
         </div>
-      </form>
+
+        {/* Additional Info Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* What I'm Looking For */}
+          <div className="border border-gray-800 rounded-lg] bg-[#010409] p-6">
+            <h3 className="text-xl font-bold mb-4 text-orange-400">
+              What I&apos;m Looking For
+            </h3>
+            <ul className="space-y-3 text-gray-400">
+              <li className="flex items-start gap-3">
+                <span className="text-orange-500 mt-1">▸</span>
+                <span>
+                  Full-stack development roles with modern tech stacks
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-orange-500 mt-1">▸</span>
+                <span>
+                  Exciting projects involving React, Next.js, or Node.js
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-orange-500 mt-1">▸</span>
+                <span>Opportunities to work on impactful products</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-orange-500 mt-1">▸</span>
+                <span>Remote-friendly teams with collaborative culture</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Response Time */}
+          <div className="border border-gray-800 rounded-lg bg-[#010409] p-6">
+            <h3 className="text-xl font-bold mb-4 text-orange-400">
+              Response Time
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-gray-300">Email</span>
+                  <span className="text-sm text-green-400">24 hours</span>
+                </div>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div
+                    className="bg-green-500 h-2 rounded-full"
+                    style={{ width: "95%" }}
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-gray-300">LinkedIn</span>
+                  <span className="text-sm text-yellow-400">1-2 days</span>
+                </div>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div
+                    className="bg-yellow-500 h-2 rounded-full"
+                    style={{ width: "75%" }}
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-gray-300">Twitter DM</span>
+                  <span className="text-sm text-orange-400">2-3 days</span>
+                </div>
+                <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div
+                    className="bg-orange-500 h-2 rounded-full"
+                    style={{ width: "60%" }}
+                  ></div>
+                </div>
+              </div>
+
+              <p className="text-sm text-gray-500 pt-2">
+                For urgent matters, email is your best bet!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer CTA */}
+        <div className="mt-12 text-center border border-gray-800 rounded-lg bg-[#010409] p-8">
+          <h3 className="text-2xl font-bold mb-3">
+            Let&apos;s Build Something Great Together
+          </h3>
+          <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+            Whether you have a project in mind, want to collaborate, or just
+            want to chat about tech, I&apos;m always happy to connect with
+            fellow developers and tech enthusiasts.
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a
+              href="mailto:mwangiiisharon@gmail.com"
+              className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors"
+            >
+              Send an Email
+            </a>
+            <a
+              href="https://github.com/Wangariiisharon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors border border-gray-700"
+            >
+              View GitHub
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

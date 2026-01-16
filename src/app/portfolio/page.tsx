@@ -19,15 +19,16 @@ const Portfolio = () => {
     filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   const techColors = {
-    "Next.js": "bg-gray-800 text-white",
+    "Next.js": "bg-[#F9AB00] text-white",
     React: "bg-blue-600 text-white",
     TypeScript: "bg-blue-700 text-white",
     "Node.js": "bg-green-600 text-white",
-    MongoDB: "bg-green-700 text-white",
-    PostgreSQL: "bg-blue-800 text-white",
-    Redux: "bg-purple-600 text-white",
+    Vercel: "bg-[#092F32] text-white",
+    "Framer Motion": "bg-pink-500 text-white",
+    Sanity: "bg-purple-600 text-white",
     Firebase: "bg-orange-500 text-white",
-    "React Native": "bg-cyan-600 text-white",
+    TailwindCss: "bg-cyan-600 text-white",
+    Resend: "bg-[#D896AC] text-white",
   };
 
   return (

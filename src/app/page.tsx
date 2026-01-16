@@ -38,9 +38,9 @@ const App = () => {
 
       {/* Main Container */}
 
-      <div className="flex flex-col xl:flex-row xl:flex xl:justify-center xl:items-center space-y-0 xl:space-y-0 xl:mt-0">
+      <div className="flex flex-col xl:flex-row xl:gap-20 xl:px-60 xl:pt-8">
         {/* Left Sidebar - Fixed */}
-        <aside className="xl:w-80 w-full p-6 xl:fixed xl:top-40 top-0 left-0 xl:h-screen xl:overflow-y-auto xl:border-r xl:border-gray-800">
+        <aside className="xl:w-80 w-full p-6 xl:fixed xl:h-screen xl:overflow-y-auto xl:border-r xl:border-gray-800">
           <div className="flex xl:flex-col flex-row space-x-4 xl:space-x-0 items-center xl:items-start">
             <div className="">
               <Image
@@ -68,28 +68,18 @@ const App = () => {
                 <span>/home/sharon-mwangi</span>
               </div>
               <div className="flex items-center gap-2">
-                <span>✉️</span>
+                <span>✉️ Email: </span>
                 <span>mwangiiisharon@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <span>🐙</span>
-                <span>Sharon-mwangi</span>
+                <span>🐙 Github: </span>
+                <a href="https://github.com/Wangariiisharon">Sharon-mwangi</a>
               </div>
               <div className="flex items-center gap-2">
-                <span>💼</span>
-                <span>in/emanuele-sgroi</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span>📷</span>
-                <span>emanueli_sgroi</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span>📘</span>
-                <span>Emanuele Sgroi</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span>💬</span>
-                <span>emanuele_sgroi</span>
+                <span>💼 LinkedIn: </span>
+                <a href="www.linkedin.com/in/sharon-mwangi-656a17233">
+                  Sharon Mwangi
+                </a>
               </div>
             </div>
           </div>
@@ -103,7 +93,12 @@ const App = () => {
         <div className="h-6 bg-[#010409] w-full xl:hidden block"></div>
 
         {/* Main Content Area */}
-        <main className="flex-1 px-8 pt-8 max-w-5xl">{renderContent()}</main>
+        <main
+          className="flex-1 px-8 pt-8 max-w-5xl
+                 xl:ml-96 xl:flex xl:items-center"
+        >
+          <div className="w-full">{renderContent()}</div>
+        </main>
       </div>
     </div>
   );
