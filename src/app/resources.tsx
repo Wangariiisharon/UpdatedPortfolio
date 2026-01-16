@@ -1,0 +1,82 @@
+export const projects = [
+  {
+    id: 1,
+    name: "SongaTrack",
+    description:
+      "SongaTrack is a fleet and transportation management platform designed to help businesses run logistics more efficiently. It provides end‑to‑end visibility and operational tools across vehicles, drivers, trips, maintenance and finance so teams can reduce inefficiencies and improve productivity.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind", "Node.js", "Firebase"],
+    category: "web",
+    github: "#",
+    link: "https://app.songatrack.com/auth/sign-in?next=%2Fhome",
+    date: "2025-08",
+  },
+  {
+    id: 2,
+    name: "Norah Digital Website",
+    description:
+      "I built the Norah Digital company website with Next.js for performance, scalability, and SEO. For flexibility, I paired this setup with Sanity CMS and Resend",
+    tech: [
+      "React",
+      "Nextjs",
+      "Sanity",
+      "Framer Motion",
+      "TailwindCSS",
+      "Vercel",
+      "TypeScript",
+      "Resend",
+    ],
+    category: "web",
+    github: "#",
+    link: "https://www.norahdigital.com/",
+    date: "2025-10",
+  },
+  {
+    id: 3,
+    name: "Elevate Wellness",
+    description:
+      "ElevateWell Kenya offers personalized mobile IV drip therapy services to help individuals rehydrate, recharge, and reclaim energy with doctor-formulated nutrient infusions delivered straight to your door, backed by FAQs and contact information for booking and support.",
+    tech: [
+      "React",
+      "Nextjs",
+      "Sanity",
+      "TailwindCSS",
+      "Vercel",
+      "TypeScript",
+      "Resend",
+    ],
+    category: "web",
+    link: "https://www.elevatewellke.com/",
+    github: "#",
+    date: "2025-11",
+  },
+  {
+    id: 4,
+    name: "Riverland",
+    description:
+      "Riverland is a modern, lifestyle-centered shopping destination designed to bring together retail, dining, and entertainment under one vibrant roof. The upcoming mall aims to create an engaging community hub where visitors can shop top brands, enjoy diverse culinary experiences, and connect in stylish, comfortable spaces.",
+    tech: [
+      "React",
+      "Nextjs",
+      "Sanity",
+      "TailwindCSS",
+      "Vercel",
+      "TypeScript",
+      "Resend",
+    ],
+    category: "mobile",
+    link: "https://riverland-mall.vercel.app",
+    github: "#",
+    date: "2024-08",
+  },
+  {
+    id: 5,
+    name: "Summerix",
+    description:
+      "Modern and scalable SaaS Starter Kit designed to jumpstart your product development. This boilerplate comes with certain important features out of the box so that users don't have to write the boilerplate code, instead, they can focus on building the core features!",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind", "Node.js", "Firebase"],
+    category: "web",
+    link: "https://summerix.vercel.app/",
+    github: "#",
+    date: "2024-07",
+  },
+];
