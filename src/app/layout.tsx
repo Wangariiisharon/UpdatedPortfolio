@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ElfsightChatbot from "@/components/chatbot";
+import ChatBot from "../components/chatbot";
+import AppLayout from "./appLayout";
 
 export const metadata: Metadata = {
   title: "Sharon Mwangi's Portfolio",
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-terminal bg-[#0D1117]">
         {children}
-        <ElfsightChatbot />
+        <ChatBot />
       </body>
     </html>
   );

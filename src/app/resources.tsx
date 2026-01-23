@@ -5,97 +5,96 @@ export const projects = [
     id: 1,
     name: "SongaTrack",
     description:
-      "SongaTrack is a fleet and transportation management platform designed to help businesses run logistics more efficiently. It provides end‑to‑end visibility and operational tools across vehicles, drivers, trips, maintenance and finance so teams can reduce inefficiencies and improve productivity.",
-    tech: [
+      "SongaTrack is a fleet and transportation management platform designed to help businesses run logistics more efficiently. It provides end-to-end visibility and operational tools across vehicles, drivers, trips, maintenance and finance so teams can reduce inefficiencies and improve productivity.",
+    isPublic: true,
+    updated: "Aug 2025",
+    topics: [
       "Next.js",
       "React",
       "TypeScript",
-      "TailwindCss",
+      "TailwindCSS",
       "Node.js",
       "Firebase",
     ],
-    category: "web",
-    github: "#",
     link: "https://app.songatrack.com/auth/sign-in?next=%2Fhome",
-    date: "2025-08",
   },
   {
     id: 2,
-    name: "Norah Digital Website",
+    name: "Norah Digital",
     description:
       "I built the Norah Digital company website with Next.js for performance, scalability, and SEO. For flexibility, I paired this setup with Sanity CMS and Resend",
-    tech: [
+    isPublic: true,
+    updated: "Nov 2025",
+    topics: [
       "React",
       "Next.js",
       "Sanity",
-      "Framer Motion",
-      "TailwindCss",
+      "Resend",
       "Vercel",
+      "TailwindCSS",
       "TypeScript",
       "Resend",
     ],
-    category: "web",
-    github: "#",
     link: "https://www.norahdigital.com/",
-    date: "2025-10",
   },
   {
     id: 3,
     name: "Elevate Wellness",
     description:
       "ElevateWell Kenya offers personalized mobile IV drip therapy services to help individuals rehydrate, recharge, and reclaim energy with doctor-formulated nutrient infusions delivered straight to your door, backed by FAQs and contact information for booking and support.",
-    tech: [
+    isPublic: true,
+    updated: "Dec 2025",
+    topics: [
       "React",
       "Next.js",
       "Sanity",
-      "TailwindCss",
+      "TailwindCSS",
       "Vercel",
       "TypeScript",
       "Resend",
     ],
-    category: "web",
     link: "https://www.elevatewellke.com/",
-    github: "#",
-    date: "2025-11",
   },
   {
     id: 4,
     name: "Riverland",
     description:
       "Riverland is a modern, lifestyle-centered shopping destination designed to bring together retail, dining, and entertainment under one vibrant roof. The upcoming mall aims to create an engaging community hub where visitors can shop top brands, enjoy diverse culinary experiences, and connect in stylish, comfortable spaces.",
-    tech: [
-      "React",
-      "Next.js",
-      "Sanity",
-      "TailwindCss",
-      "Vercel",
-      "TypeScript",
-      "Resend",
-    ],
-    category: "web",
+    isPublic: false,
+    updated: "Jan 2026",
+    topics: ["React", "Next.js", "Sanity", "TailwindCSS", "Vercel"],
     link: "https://riverland-mall.vercel.app",
-    github: "#",
-    date: "2024-08",
   },
   {
     id: 5,
-    name: "Summerix",
+    name: "Portfolio Website",
     description:
-      "Modern and scalable SaaS Starter Kit designed to jumpstart your product development. This boilerplate comes with certain important features out of the box so that users don't have to write the boilerplate code, instead, they can focus on building the core features!",
-    tech: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "TailwindCss",
-      "Node.js",
-      "Vercel",
-      "Firebase",
-    ],
-    category: "web",
-    link: "https://summerix.vercel.app/",
-    github: "#",
-    date: "2024-07",
+      "A GitHub-inspired portfolio website showcasing my projects, skills, and experience as a full-stack developer.",
+    isPublic: true,
+    updated: "Jan 2026",
+    topics: ["Next.js", "TypeScript", "TailwindCSS", "React"],
   },
+];
+// Technologies data
+export const technologiesColor = [
+  { name: "JavaScript", color: "#eab308" },
+  { name: "TypeScript", color: "#2563eb" },
+  { name: "HTML", color: "#ea580c" },
+  { name: "CSS", color: "#3b82f6" },
+  { name: "Resend", color: "#ec4899" },
+  { name: "React", color: "#06b6d4" },
+  { name: "Sanity", color: "#7c3aed" },
+  { name: "Next.js", color: "#4b5563" },
+  { name: "Node.js", color: "#16a34a" },
+  { name: "Framer Motion", color: "#dc2626" },
+  { name: "NPM", color: "#ef4444" },
+  { name: "Firebase", color: "#f97316" },
+  { name: "Python", color: "#3b82f6" },
+  { name: "Git", color: "#c2410c" },
+  { name: "TailwindCSS", color: "#0891b2" },
+  { name: "Figma", color: "#7c3aed" },
+  { name: "Vercel", color: "#2563eb" },
+  { name: "Netlify", color: "#ec4899" },
 ];
 
 //social links data
@@ -104,8 +103,8 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    handle: "@Emanuele-Sgroi",
-    url: "https://github.com/Emanuele-Sgroi",
+    handle: "@Wangariiisharon",
+    url: "https://github.com/Wangariiisharon",
     color: "from-gray-700 to-gray-900",
     hoverColor: "hover:border-gray-600",
     description: "Check out my code, projects, and contributions",
@@ -114,8 +113,8 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    handle: "in/emanuele-sgroi",
-    url: "https://linkedin.com/in/emanuele-sgroi",
+    handle: "in/sharon-mwangi-656a17233",
+    url: "https://www.linkedin.com/in/sharon-mwangi-656a17233/",
     color: "from-blue-600 to-blue-800",
     hoverColor: "hover:border-blue-600",
     description: "Connect with me professionally",
@@ -124,8 +123,8 @@ const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    handle: "em.sgroi@gmail.com",
-    url: "mailto:em.sgroi@gmail.com",
+    handle: "mwangiiisharon@gmail.com",
+    url: "mailto:mwangiiisharon@gmail.com",
     color: "from-orange-500 to-red-600",
     hoverColor: "hover:border-orange-500",
     description: "Send me a message anytime",
@@ -148,13 +147,14 @@ export default socialLinks;
 //Dev Tools
 export const technologies = [
   {
+    id: 1,
     name: "React",
     category: "frontend",
     icon: "⚛️",
     color: "from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600",
     tagline: "Building interactive UIs with hooks and components",
     description:
-      "React is my go-to library for building dynamic user interfaces. I leverage hooks for state management and side effects, creating reusable components that make development faster and code more maintainable.",
+      "React is my go-to library for building dynamic user interfaces. I leverage hooks for state management and side effects, creating reusable components that make development faster and my code more maintainable.",
     codeSnippet: `// Custom hook for input handling
 import { useState } from 'react';
 
@@ -208,10 +208,11 @@ const ContactSection = () => {
     </div>
   );
 };`,
-    projects: ["Wedding Website", "E-Commerce Platform", "Weather Dashboard"],
+    projects: ["All Projects"],
   },
   {
     name: "Next.js",
+    id: 2,
     category: "frontend",
     icon: "▲",
     color: "from-gray-700 to-gray-900",
@@ -249,16 +250,17 @@ export default async function handler(req, res) {
     res.status(500).json({ error: error.message });
   }
 }`,
-    projects: ["Hazeltree Lodge B&B", "Portfolio CMS"],
+    projects: ["All Projects"],
   },
   {
     name: "Node.js & Express",
+    id: 3,
     category: "backend",
     icon: "🟢",
     color: "from-green-500 to-green-700",
     tagline: "Building scalable REST APIs and middleware",
     description:
-      "Node.js allows me to use JavaScript across the entire stack. I build RESTful APIs with Express, handling authentication, validation, and database operations efficiently.",
+      "Node.js allows me to use JavaScript across the entire stack. I handle authentication, validation, and database operations efficiently.",
     codeSnippet: `// Express middleware for authentication
 import jwt from 'jsonwebtoken';
 
@@ -291,11 +293,12 @@ app.get('/api/user/profile',
     res.json(user);
   }
 );`,
-    projects: ["Wedding Website", "E-Commerce Platform"],
+    projects: ["Summerix", "SongaTrack"],
   },
 
   {
     name: "Tailwind CSS",
+    id: 4,
     category: "frontend",
     icon: "🎨",
     color: "from-cyan-400 to-blue-500",
@@ -339,10 +342,11 @@ export const Button = ({
     Get Started
   </Button>
 </div>`,
-    projects: ["Portfolio CMS", "Wedding Website"],
+    projects: ["All Projects"],
   },
   {
     name: "Resend",
+    id: 5,
     category: "backend",
     icon: "📧",
     color: "from-purple-500 to-pink-500",
@@ -350,44 +354,51 @@ export const Button = ({
     description:
       "Resend makes sending transactional emails simple and reliable. I use it for contact submissions, RSVP confirmations, and notification systems.",
     codeSnippet: `// Email service with Resend
-import { Resend } from 'resend';
+
+import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export class EmailService {
-  static async sendRSVPConfirmation(userEmail, userData) {
-    try {
-      const { data, error } = await resend.emails.send({
-        from: 'Wedding <rsvp@ourwedding.com>',
-        to: userEmail,
-        subject: 'RSVP Confirmation - Our Special Day!',
-        html: \`
-          <div style="font-family: Arial, sans-serif;">
-            <h1>Thank you, \${userData.name}!</h1>
-            <p>We've received your RSVP.</p>
-            <div style="background: #f3f4f6; padding: 20px;">
-              <h3>Your Details:</h3>
-              <p><strong>Status:</strong> \${userData.rsvpStatus}</p>
-              <p><strong>Guests:</strong> \${userData.totalGuests}</p>
-            </div>
-            <p>See you on the big day! 💕</p>
-          </div>
-        \`
-      });
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    const { customerData, selectedSlot, selectedServices, message } = body;
 
-      if (error) throw error;
-      return { success: true, data };
-    } catch (error) {
-      console.error('Email failed:', error);
-      return { success: false, error: error.message };
-    }
+    await resend.emails.send({
+      from: "Booking Inquiry <inquiry@elevatewellke.com>", // this can be replaced with a verified domain later
+      to: "hello@elevatewellke.com", // the receiving email
+      subject: 'New Message from \${customerData.fullName}',
+        html: \`
+        <p><strong> Name:</strong> \${customerData.fullName}</p>
+        <p><strong> Email:</strong> \${customerData.email}</p>
+        <p><strong>Phone Number:</strong> \${customerData.phone}</p>
+        <p><strong>Selected Services:</strong> \${selectedServices}</p>
+        <p><strong>Selected Timeslots:</strong> \${selectedSlot}</p>
+        <p><strong>Message:</strong> \${message}</p>
+              \`
+,
+    });
+
+    // resend.contacts.create({
+    //   email: customerData.email,
+    //   firstName: customerData.fullName,
+    //   unsubscribed: true,
+    // });
+
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("Email send error:", error);
+    return NextResponse.json({ success: false, error }, { status: 500 });
   }
-}`,
-    projects: ["Wedding Website", "Hazeltree Lodge B&B"],
+}
+`,
+    projects: ["Norah Digital", "Elevate Wellness", "Riverland"],
   },
 
   {
     name: "Figma",
+    id: 6,
     category: "design",
     icon: "🎨",
     color: "from-red-400 to-purple-500",
@@ -437,10 +448,11 @@ const Card = ({ children }) => (
     {children}
   </div>
 );`,
-    projects: ["Hazeltree Lodge B&B", "Wedding Website"],
+    projects: ["All Projects"],
   },
   {
     name: "Git & GitHub",
+    id: 7,
     category: "tools",
     icon: "🔀",
     color: "from-gray-700 to-gray-900",
@@ -495,56 +507,195 @@ jobs:
   },
   {
     name: "Sanity",
+    id: 8,
     category: "tools",
     icon: "🔀",
     color: "from-gray-700 to-gray-900",
     tagline: "Version control and collaboration",
     description:
-      "Git is essential for managing code changes and collaborating with others. I use branching strategies, pull requests, and GitHub Actions for CI/CD.",
-    codeSnippet: `# Git workflow for feature development
+      "Create and manage structured content that can be reused across any digital channels. I use Sanity to build flexible CMS solutions that empower content creators while providing developers with a robust API and customizable editing environment.",
+    codeSnippet: `# Sanity schema for services document
 
-# Create feature branch from main
-git checkout -b feature/add-rsvp-system
+import { DocumentTextIcon } from "@sanity/icons";
+import { defineField, defineType } from "sanity";
 
-# Make changes and commit with descriptive message
-git add .
-git commit -m "feat: implement RSVP system with email
+export const serviceType = defineType({
+  name: "service",
+  title: "Services",
+  type: "document",
+  icon: DocumentTextIcon,
+  fields: [
+    defineField({
+      name: "title",
+      type: "string",
+    }),
+    defineField({
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "title",
+      },
+    }),
+    defineField({
+      name: "mainImage",
+      type: "image",
+      options: {
+        hotspot: true,
+        metadata: ["blurhash", "lqip", "palette"], // <-- updated to valid metadata types
+      },
+      fields: [
+        defineField({
+          name: "alt",
+          type: "string",
+          title: "Alternative text",
+        }),
+      ],
+    }),
 
-- Add RSVP component
-- Integrate Resend for confirmations
-- Add MongoDB schema for guests
-- Implement validation"
+    defineField({
+      name: "publishedAt",
+      type: "datetime",
+    }),
+    defineField({
+      name: "description",
+      type: "blockContent",
+    }),
+    defineField({
+      name: "price",
+      type: "number",
+    }),
+    defineField({
+      name: "tagline",
+      type: "string",
+    }),
+    defineField({
+      name: "serviceSummary",
+      type: "string",
+      validation: (Rule) =>
+        Rule.required().custom((text) => {
+          if (!text) return true; // required rule will handle empty case
+          const wordCount = text.trim().split(/\s+/).length;
+          // if (wordCount < 10)
+          //   return "Service summary must have at least 10 words.";
+          if (wordCount > 15)
+            return "Service summary must have at most 15 words.";
+          return true;
+        }),
+    }),
+  ],
+  preview: {
+    select: {
+      title: "title",
+      author: "author.name",
+      media: "mainImage",
+    },
+    prepare(selection) {
+      const { author } = selection;
+      return { ...selection, subtitle: author && by \${author} };
+    },
+  },
+}); 
 
-# Keep branch updated with main
-git checkout main
-git pull origin main
-git checkout feature/add-rsvp-system
-git rebase main
 
-# Push and create pull request
-git push origin feature/add-rsvp-system
+# Usage in Next.js to fetch services
 
-# After review, merge to main
-git checkout main
-git merge feature/add-rsvp-system
-git push origin main
+import { client } from "@/sanity/lib/client";
+import { Service } from "../../app/resources";
+export const revalidate = 60;
 
-# Clean up feature branch
-git branch -d feature/add-rsvp-system
+export async function getServices() {
+  return client.fetch(\`
+    *[_type == "service"]
+      | order(publishedAt desc){
+        title,
+        "slug": slug.current,
+        mainImage {
+          asset->{
+            _id,
+            url,
+            alt
+          }
+        },
+        publishedAt,
+        amount,
+        tagline,
+        serviceSummary,
+        "description": pt::text(description)
+      }
+  \`);
+}
 
-# GitHub Actions workflow
-# .github/workflows/deploy.yml
-name: Deploy
-on:
-  push:
-    branches: [main]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Deploy to Vercel
-        run: vercel --prod`,
+`,
     projects: ["All Projects"],
   },
+  {
+    name: "Vercel",
+    id: 9,
+    category: "tools",
+    icon: "▲",
+    color: "from-gray-700 to-gray-900",
+    tagline: "Deployment and hosting platform",
+    description:
+      "Vercel provides seamless deployment for Next.js applications. I use it for its easy integration with GitHub for continuous deployment.",
+    codeSnippet: `# Vercel configuration for Next.js project
+
+# vercel.json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
+
+# Environment variables setup
+# In Vercel dashboard, set the following:
+# NEXT_PUBLIC_API_URL=https://api.mydomain.com
+# RESEND_API_KEY=your_resend_api_key_here
+`,
+    projects: ["All Projects"],
+  },
+  {
+    name: "Firebase",
+    id: 10,
+    category: "tools",
+    icon: "🟢",
+    color: "from-gray-700 to-gray-900",
+    tagline: "Backend-as-a-Service platform",
+    description:
+      "Firebase offers a suite of tools for building web and mobile applications. I use its real-time database, authentication, and hosting services to accelerate development and scale applications effortlessly.",
+    codeSnippet: `# Firebase configuration for Next.js project
+// firebaseConfig.js
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+`,
+    projects: ["Summerix", "Songatrack"],
+  },
 ];
+
+export type FocusedItem = {
+  type: "project" | "technology";
+  id: number;
+};

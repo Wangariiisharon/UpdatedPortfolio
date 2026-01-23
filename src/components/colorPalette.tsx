@@ -233,13 +233,13 @@ export default function ColorPaletteGenerator() {
                 type="color"
                 value={baseColor}
                 onChange={(e) => setBaseColor(e.target.value)}
-                className="w-16 h-16 rounded border-2 border-gray-700 cursor-pointer bg-[#010409]"
+                className="w-12 h-12 rounded border-2 border-gray-700 cursor-pointer bg-[#010409]"
               />
               <input
                 type="text"
                 value={baseColor}
                 onChange={(e) => setBaseColor(e.target.value)}
-                className="flex-1 bg-[#010409] text-white px-4 py-2 rounded border border-gray-800 font-mono focus:border-gray-600 focus:outline-none"
+                className="flex-1 bg-[#010409] text-white px-4 py-4 rounded border border-gray-800 font-mono focus:border-gray-600 focus:outline-none"
                 placeholder="#3B82F6"
               />
             </div>
@@ -252,7 +252,7 @@ export default function ColorPaletteGenerator() {
             <select
               value={scheme}
               onChange={(e) => setScheme(e.target.value)}
-              className="w-full bg-[#010409] text-white px-4 py-3 rounded border border-gray-800 focus:border-gray-600 focus:outline-none cursor-pointer"
+              className="w-full bg-[#010409] text-white p-4 rounded border border-gray-800 focus:border-gray-600 focus:outline-none cursor-pointer"
             >
               {schemes.map((s) => (
                 <option key={s.value} value={s.value}>
@@ -274,7 +274,7 @@ export default function ColorPaletteGenerator() {
               className="flex items-center gap-4 p-4 bg-[#010409] border border-gray-800 rounded hover:border-gray-700 transition-colors group"
             >
               <div
-                className={`w-28 h-28 rounded border border-2 border-gray-700 flex-shrink-0`}
+                className={`w-12 h-12 rounded border border-2 border-gray-700 flex-shrink-0`}
                 style={{ backgroundColor: color.hex }}
               />
 

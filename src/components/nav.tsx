@@ -1,6 +1,16 @@
 "use client";
-import React from "react";
-import { User, Settings, Menu } from "lucide-react";
+import React, { useState } from "react";
+import {
+  User,
+  Settings,
+  Search,
+  Menu,
+  NotebookPen,
+  ChevronsLeftRightEllipsis,
+  ContactRound,
+  Palette,
+} from "lucide-react";
+import GlobalSearch from "./search";
 
 export default function Nav({
   activePage,
@@ -9,14 +19,18 @@ export default function Nav({
   activePage: string;
   setActivePage: (page: string) => void;
 }) {
-  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [focusedItem, setFocusedItem] = useState<{
+    type: string;
+    id: number;
+  } | null>(null);
 
   const navItems = [
-    { id: "profile", label: "Profile", icon: "🏠" },
-    { id: "portfolio", label: "Portfolio", icon: "💼" },
-    { id: "devTools", label: "Dev Tools", icon: "📝" },
-    { id: "contact", label: "Contact", icon: "📧" },
-    { id: "colorPalette", label: "Color Palette", icon: "📝" },
+    { id: "profile", label: "Profile", icon: NotebookPen },
+    { id: "portfolio", label: "Portfolio", icon: ChevronsLeftRightEllipsis },
+    { id: "devTools", label: "Dev Tools", icon: NotebookPen },
+    { id: "contact", label: "Contact", icon: ContactRound },
+    { id: "colorPalette", label: "Color Palette", icon: Palette },
   ];
 
   return (
@@ -25,7 +39,7 @@ export default function Nav({
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gray-700 rounded border border-gray-600 flex items-center justify-center font-bold">
+              <div className="w-10 h-10 bg-transparent rounded border border-gray-600 flex items-center justify-center font-bold">
                 SM
               </div>
               <span className="xl:font-semibold xl:block hidden">
@@ -35,16 +49,11 @@ export default function Nav({
           </div>
 
           <div className="flex items-center gap-4">
-            {/* <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Type ⌘ to search"
-                className="bg-transparent border border-gray-800 rounded-md pl-10 pr-4 py-1.5 text-sm focus:outline-none focus:border-blue-500 w-64"
-              />
-            </div> */}
-            <User className="w-5 h-5 text-gray-400 cursor-pointer" />
-            <Settings className="w-5 h-5 text-gray-400 cursor-pointer" />
+            <GlobalSearch
+              setActivePage={setActivePage}
+              setFocusedItem={setFocusedItem}
+            />
+            <User className="w-5 h-5 text-white cursor-pointer" />
             <span className="px-2 py-1 bg-gray-800 rounded text-sm">SM</span>
           </div>
         </div>
@@ -56,7 +65,7 @@ export default function Nav({
             {/* Mobile + Desktop */}
             {navItems
               .filter((item) =>
-                ["Profile", "portfolio", "contact"].includes(item.id)
+                ["profile", "portfolio", "contact"].includes(item.id)
               )
               .map((item) => (
                 <button
@@ -68,7 +77,9 @@ export default function Nav({
                       : "border-transparent text-gray-400 hover:text-gray-200"
                   }`}
                 >
-                  <span className="mr-2">{item.icon}</span>
+                  <span className="mr-2  inline-flex">
+                    {React.createElement(item.icon)}
+                  </span>
                   <span className=" sm:inline">{item.label}</span>
                 </button>
               ))}
@@ -89,7 +100,9 @@ export default function Nav({
                         : "border-transparent text-gray-400 hover:text-gray-200"
                     }`}
                   >
-                    <span className="mr-2">{item.icon}</span>
+                    <span className="mr-2 inline-flex">
+                      {React.createElement(item.icon)}
+                    </span>
                     {item.label}
                   </button>
                 ))}
@@ -120,7 +133,9 @@ export default function Nav({
                       }}
                       className="w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-800"
                     >
-                      <span className="mr-2">{item.icon}</span>
+                      <span className="mr-2  inline-flex">
+                        {React.createElement(item.icon)}
+                      </span>
                       {item.label}
                     </button>
                   ))}
