@@ -27,17 +27,13 @@ export default function DevToolsClient({ focusedTechName }: DevToolsProps) {
 
   useEffect(() => {
     if (focusedTechName) {
-      // Find and select the technology
       const tech = technologies.find((t) => t.name === focusedTechName);
       if (tech) {
-        // Scroll to the focused technology
         setTimeout(() => {
           const element = document.getElementById(`tech-${focusedTechName}`);
           if (element) {
             element.scrollIntoView({ behavior: "smooth", block: "center" });
-            // Set highlight for visual feedback
             setHighlightedTech(focusedTechName);
-            // Remove highlight after 3 seconds
             setTimeout(() => setHighlightedTech(null), 3000);
           }
         }, 100);

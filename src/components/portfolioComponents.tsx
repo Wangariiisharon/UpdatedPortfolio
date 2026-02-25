@@ -4,7 +4,7 @@ import { Search, Circle, Eye } from "lucide-react";
 import { technologiesColor, projects } from "@/app/resources";
 import Link from "next/link";
 
-export default function PortfolioComponnt({
+export default function PortfolioComponent({
   focusedProjectId,
 }: {
   focusedProjectId?: number | string | null;
@@ -182,7 +182,7 @@ export default function PortfolioComponnt({
               <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500">
                 <div className="flex items-center gap-1.5">
                   <Eye className="w-3 h-3" />
-                  <Link href="">Demo</Link>
+                  <Link href={project.link || "#"}>Demo</Link>
                 </div>
 
                 <span>Updated {project.updated}</span>

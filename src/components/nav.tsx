@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import {
   User,
-  Settings,
-  Search,
   Menu,
   NotebookPen,
   ChevronsLeftRightEllipsis,
@@ -69,8 +67,16 @@ export default function Nav({
               )
               .map((item) => (
                 <button
+                  type="button"
                   key={item.id}
-                  onClick={() => setActivePage(item.id)}
+                  onClick={() => {
+                    // ensure click updates parent state
+                    setActivePage(item.id);
+                    // close mobile menu if open
+                    setMenuOpen(false);
+                    // debug
+                    // console.debug("Nav click:", item.id);
+                  }}
                   className={`px-2 py-3 text-sm font-medium border-b-2 transition-colors ${
                     activePage === item.id
                       ? "border-orange-500 text-white"
@@ -92,8 +98,12 @@ export default function Nav({
                 )
                 .map((item) => (
                   <button
+                    type="button"
                     key={item.id}
-                    onClick={() => setActivePage(item.id)}
+                    onClick={() => {
+                      setActivePage(item.id);
+                      setMenuOpen(false);
+                    }}
                     className={`px-2 py-3 text-sm font-medium border-b-2 transition-colors ${
                       activePage === item.id
                         ? "border-orange-500 text-white"
@@ -112,6 +122,7 @@ export default function Nav({
           {/* RIGHT: Hamburger (mobile only) */}
           <div className="xl:hidden relative">
             <button
+              type="button"
               onClick={() => setMenuOpen(!menuOpen)}
               className="p-2 text-gray-400 hover:text-white"
             >
@@ -126,6 +137,7 @@ export default function Nav({
                   )
                   .map((item) => (
                     <button
+                      type="button"
                       key={item.id}
                       onClick={() => {
                         setActivePage(item.id);
