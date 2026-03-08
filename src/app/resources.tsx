@@ -20,6 +20,24 @@ export const projects = [
   },
   {
     id: 2,
+    name: "ContextAI",
+    description:
+      "ContextAI is a RAG (Retrieval-Augmented Generation) search application that combines the power of AI with real-time data retrieval to provide users with accurate and contextually relevant information. Users upload documents, and the app uses GemniAI to understand the content and answer questions based on that information, making it a powerful tool for knowledge management and information retrieval.",
+    isPublic: true,
+    updated: "Mar 2026",
+    topics: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Node.js",
+      "Supabase",
+      "GemniAI",
+    ],
+    link: "https://contextai-ivory.vercel.app/",
+  },
+  {
+    id: 3,
     name: "Norah Digital",
     description:
       "I built the Norah Digital company website with Next.js for performance, scalability, and SEO. For flexibility, I paired this setup with Sanity CMS and Resend",
@@ -38,7 +56,7 @@ export const projects = [
     link: "https://www.norahdigital.com/",
   },
   {
-    id: 3,
+    id: 4,
     name: "Elevate Wellness",
     description:
       "ElevateWell Kenya offers personalized mobile IV drip therapy services to help individuals rehydrate, recharge, and reclaim energy with doctor-formulated nutrient infusions delivered straight to your door, backed by FAQs and contact information for booking and support.",
@@ -56,17 +74,33 @@ export const projects = [
     link: "https://www.elevatewellke.com/",
   },
   {
-    id: 4,
+    id: 5,
+    name: "LaunchKit",
+    description:
+      "Its a SaaS Starter Kit designed to jumpstart product development. It comes with certain features so that users don't have to write the boilerplate code, instead you could focus on building the core feature! It includes user authentication, role-based access control, a permission system, and a customizable dashboard. The kit is built with Next.js, Tailwind CSS, TypeScript, and Firbase.",
+    isPublic: false,
+    updated: "Feb 2025",
+    topics: [
+      "Next.js",
+      "React",
+      "TailwindCSS",
+      "Framer Motion",
+      "Vercel, Firbase",
+    ],
+    link: "https://ecommerce-store-ivory.vercel.app",
+  },
+  {
+    id: 6,
     name: "Riverland",
     description:
       "Riverland is a modern, lifestyle-centered shopping destination designed to bring together retail, dining, and entertainment under one vibrant roof. The upcoming mall aims to create an engaging community hub where visitors can shop top brands, enjoy diverse culinary experiences, and connect in stylish, comfortable spaces.",
     isPublic: false,
     updated: "Jan 2026",
     topics: ["React", "Next.js", "Sanity", "TailwindCSS", "Vercel"],
-    link: "https://riverland-mall.vercel.app",
+    link: "https://summerix.vercel.app/auth/sign-in",
   },
   {
-    id: 5,
+    id: 7,
     name: "Portfolio Website",
     description:
       "A GitHub-inspired portfolio website showcasing my projects, skills, and experience as a full-stack developer.",
