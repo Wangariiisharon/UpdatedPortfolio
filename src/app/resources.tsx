@@ -1,3 +1,4 @@
+import { link } from "fs";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
 
 export const projects = [
@@ -107,6 +108,7 @@ export const projects = [
     isPublic: true,
     updated: "Jan 2026",
     topics: ["Next.js", "TypeScript", "TailwindCSS", "React"],
+    link: "https://updated-portfolio-two-sooty.vercel.app/",
   },
 ];
 // Technologies data
