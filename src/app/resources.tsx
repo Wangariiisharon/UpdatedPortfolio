@@ -5,11 +5,13 @@ export const projects = [
   {
     id: 1,
     name: "SongaTrack",
+    dot: "#fbbf24",
+
     description:
       "SongaTrack is a fleet and transportation management platform designed to help businesses run logistics more efficiently. It provides end-to-end visibility and operational tools across vehicles, drivers, trips, maintenance and finance so teams can reduce inefficiencies and improve productivity.",
-    isPublic: true,
+    visibility: true,
     updated: "Aug 2025",
-    topics: [
+    tags: [
       "Next.js",
       "React",
       "TypeScript",
@@ -19,14 +21,33 @@ export const projects = [
     ],
     link: "https://app.songatrack.com/auth/sign-in?next=%2Fhome",
   },
+
+  // {
+  //   name: "Norah Digital",
+  //   visibility: "Public",
+  //   desc: "Company website built with Next.js for performance, scalability, and SEO. Paired with Sanity CMS for headless content management and Resend for transactional email — clean architecture that non-developers can maintain.",
+  //   stack: ["Next.js", "TypeScript", "TailwindCSS", "Sanity", "Resend"],
+  //   stackColors: {
+  //     "Next.js": "text-[#f0f6fc] border-[#f0f6fc]/20 bg-[#f0f6fc]/5",
+  //     TypeScript: "text-[#388bfd] border-[#388bfd]/25 bg-[#388bfd]/7",
+  //     TailwindCSS: "text-[#38bdf8] border-[#38bdf8]/25 bg-[#38bdf8]/7",
+  //     Sanity: "text-[#f47166] border-[#f47166]/25 bg-[#f47166]/7",
+  //     Resend: "text-[#ec6547] border-[#ec6547]/25 bg-[#ec6547]/7",
+  //   },
+  //   updated: "2025",
+  //   accentColor: "#d29922",
+  //   demo: "#",
+  // },
   {
     id: 2,
     name: "ContextAI",
+    dot: "#fbbf24",
+
     description:
       "ContextAI is a RAG (Retrieval-Augmented Generation) search application that combines the power of AI with real-time data retrieval to provide users with accurate and contextually relevant information. Users upload documents, and the app uses GemniAI to understand the content and answer questions based on that information, making it a powerful tool for knowledge management and information retrieval.",
-    isPublic: true,
+    visibility: true,
     updated: "Mar 2026",
-    topics: [
+    tags: [
       "Next.js",
       "React",
       "TypeScript",
@@ -40,11 +61,13 @@ export const projects = [
   {
     id: 3,
     name: "Norah Digital",
+    dot: "#fbbf24",
+
     description:
       "I built the Norah Digital company website with Next.js for performance, scalability, and SEO. For flexibility, I paired this setup with Sanity CMS and Resend",
-    isPublic: true,
+    visibility: true,
     updated: "Nov 2025",
-    topics: [
+    tags: [
       "React",
       "Next.js",
       "Sanity",
@@ -59,11 +82,13 @@ export const projects = [
   {
     id: 4,
     name: "Elevate Wellness",
+    dot: "#fbbf24",
+
     description:
       "ElevateWell Kenya offers personalized mobile IV drip therapy services to help individuals rehydrate, recharge, and reclaim energy with doctor-formulated nutrient infusions delivered straight to your door, backed by FAQs and contact information for booking and support.",
-    isPublic: true,
+    visibility: true,
     updated: "Dec 2025",
-    topics: [
+    tags: [
       "React",
       "Next.js",
       "Sanity",
@@ -77,11 +102,13 @@ export const projects = [
   {
     id: 5,
     name: "LaunchKit",
+    dot: "#fbbf24",
+
     description:
       "Its a SaaS Starter Kit designed to jumpstart product development. It comes with certain features so that users don't have to write the boilerplate code, instead you could focus on building the core feature! It includes user authentication, role-based access control, a permission system, and a customizable dashboard. The kit is built with Next.js, Tailwind CSS, TypeScript, and Firbase.",
-    isPublic: false,
+    visibility: false,
     updated: "Feb 2025",
-    topics: [
+    tags: [
       "Next.js",
       "React",
       "TailwindCSS",
@@ -93,44 +120,124 @@ export const projects = [
   {
     id: 6,
     name: "Riverland",
+    dot: "#fbbf24",
+
     description:
       "Riverland is a modern, lifestyle-centered shopping destination designed to bring together retail, dining, and entertainment under one vibrant roof. The upcoming mall aims to create an engaging community hub where visitors can shop top brands, enjoy diverse culinary experiences, and connect in stylish, comfortable spaces.",
-    isPublic: false,
+    visibility: false,
     updated: "Jan 2026",
-    topics: ["React", "Next.js", "Sanity", "TailwindCSS", "Vercel"],
+    tags: ["React", "Next.js", "Sanity", "TailwindCSS", "Vercel"],
     link: "https://summerix.vercel.app/auth/sign-in",
   },
   {
     id: 7,
     name: "Portfolio Website",
+    dot: "#fbbf24",
+
     description:
       "A GitHub-inspired portfolio website showcasing my projects, skills, and experience as a full-stack developer.",
-    isPublic: true,
+    visibility: true,
     updated: "Jan 2026",
-    topics: ["Next.js", "TypeScript", "TailwindCSS", "React"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "React",
+      "Framer Motion",
+      "GemniAI",
+    ],
     link: "https://updated-portfolio-two-sooty.vercel.app/",
   },
 ];
+
+// {
+//   name: "Norah Digital",
+//   visibility: "Public",
+//   dot: "#fbbf24",
+//   short: "Company website built with Next.js, Sanity CMS and Resend for email.",
+//   description:
+//     "I built the Norah Digital company website with Next.js for performance, scalability, and SEO. For flexibility, I paired this setup with Sanity CMS and Resend for email functionality. Clean architecture with a headless CMS approach for easy content management.",
+//   tags: ["Next.js", "TypeScript", "TailwindCSS", "Sanity"],
+//   lang: "TypeScript",
+//   updated: "Updated 2025",
+//   tagColors: {
+//     "Next.js": "#fff", TypeScript: "#3178c6", TailwindCSS: "#06b6d4", Sanity: "#f03e2f",
+//   },
+// },
 // Technologies data
 export const technologiesColor = [
-  { name: "JavaScript", color: "#eab308" },
-  { name: "TypeScript", color: "#2563eb" },
-  { name: "HTML", color: "#ea580c" },
-  { name: "CSS", color: "#3b82f6" },
-  { name: "Resend", color: "#ec4899" },
-  { name: "React", color: "#06b6d4" },
-  { name: "Sanity", color: "#7c3aed" },
-  { name: "Next.js", color: "#4b5563" },
-  { name: "Node.js", color: "#16a34a" },
-  { name: "Framer Motion", color: "#dc2626" },
-  { name: "NPM", color: "#ef4444" },
-  { name: "Firebase", color: "#f97316" },
-  { name: "Python", color: "#3b82f6" },
-  { name: "Git", color: "#c2410c" },
-  { name: "TailwindCSS", color: "#0891b2" },
-  { name: "Figma", color: "#7c3aed" },
-  { name: "Vercel", color: "#2563eb" },
-  { name: "Netlify", color: "#ec4899" },
+  {
+    name: "JavaScript",
+    style: "bg-[#FBBF24]/20 text-[#FBBF24] border border-[#FBBF24]",
+  },
+  {
+    name: "TypeScript",
+    style: "bg-[#5999E8]/20  text-[#5999E8] border border-[#5999E8]",
+  },
+  {
+    name: "HTML",
+    style: "bg-[#D67D37]/20  text-[#D67D37] border border-[#D67D37]",
+  },
+  {
+    name: "CSS",
+    style: "bg-[#25988D]/20  text-[#25988D] border border-[#25988D]",
+  },
+  {
+    name: "Resend",
+    style: "bg-[#ED6B7F]/20  text-[#ED6B7F] border border-[#ED6B7F]",
+  },
+  {
+    name: "React",
+    style: "bg-[#25988D]/20  text-[#25988D] border border-[#25988D]",
+  },
+  {
+    name: "Sanity",
+    style: "bg-[#ED6B7F]/20  text-[#ED6B7F] border border-[#ED6B7F]",
+  },
+  {
+    name: "Next.js",
+    style: "bg-[#7B879A]/20  text-[#7B879A] border border-[#7B879A]",
+  },
+  {
+    name: "Node.js",
+    style: "bg-[#3DB26A]/20  text-[#3DB26A] border border-[#3DB26A]",
+  },
+  {
+    name: "Framer Motion",
+    style: "bg-[#987FE4]/10  text-[#987FE4] border border-[#987FE4]",
+  },
+  {
+    name: "NPM",
+    style: "bg-[#CA7635]/20  text-[#CA7635] border border-[#CA7635]",
+  },
+  {
+    name: "Firebase",
+    style: "bg-[#FBBF24]/20 text-[#FBBF24] border border-[#FBBF24]",
+  },
+  {
+    name: "Python",
+    style: "bg-[#5999E8]/20  text-[#5999E8] border border-[#5999E8]",
+  },
+  {
+    name: "Git",
+    style: "bg-[#7B879A]/20  text-[#7B879A] border border-[#7B879A]",
+  },
+  {
+    name: "TailwindCSS",
+    style: "bg-[#25988D]/20  text-[#25988D] border border-[#25988D]",
+  },
+  {
+    name: "Figma",
+    style: "bg-[#ED6B7F]/20  text-[#ED6B7F] border border-[#ED6B7F]",
+  },
+  {
+    name: "Vercel",
+    style: "bg-[#987FE4]/10  text-[#987FE4] border border-[#987FE4]",
+  },
+  {
+    name: "Netlify",
+    style: "bg-[#25988D]/20  text-[#25988D] border border-[#25988D]",
+  },
 ];
 
 //social links data
@@ -341,43 +448,41 @@ app.get('/api/user/profile',
     tagline: "Utility-first CSS for rapid UI development",
     description:
       "Tailwind speeds up my development with utility classes. I can build responsive, consistent designs without context switching between files.",
-    codeSnippet: `// Reusable button component with Tailwind
-export const Button = ({ 
-  children, 
-  variant = 'primary', 
-  size = 'md',
-  onClick
-}) => {
-  const baseStyles = 'rounded font-semibold transition-all';
-  
-  const variants = {
-    primary: 'bg-orange-500 hover:bg-orange-600 text-white',
-    secondary: 'bg-gray-800 hover:bg-gray-700 text-white',
-    outline: 'border-2 border-orange-500 text-orange-500'
-  };
-  
-  const sizes = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
-  };
+    codeSnippet: `// Responsive project card component
+const ProjectCard = ({ project }: { project: Project }) => (
+  <div className="group relative overflow-hidden rounded-md
+    border border-[#30363d] bg-[#161b22] p-4
+    transition-all duration-200 hover:border-[#8b949e]
+    hover:-translate-y-px cursor-pointer">
 
-  return (
-    <button
-      onClick={onClick}
-      className={\`\${baseStyles} \${variants[variant]} \${sizes[size]}\`}
-    >
-      {children}
-    </button>
-  );
-};
+    <div
+      className="absolute inset-x-0 top-0 h-0.5 opacity-0
+        group-hover:opacity-100 transition-opacity"
+      style={{ background: project.accent }}
+    />
 
-// Usage with responsive grid
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <Button variant="primary" size="lg">
-    Get Started
-  </Button>
-</div>`,
+    <div className="flex items-center gap-2 mb-2">
+      <BookOpen size={14} className="text-[#8b949e]" />
+      <span className="text-[#388bfd] text-xs font-mono font-semibold">
+        {project.name}
+      </span>
+    </div>
+
+    <p className="text-xs text-[#8b949e] leading-relaxed mb-3">
+      {project.desc}
+    </p>
+
+    <div className="flex flex-wrap gap-1">
+      {project.tags.map(tag => (
+        <span key={tag}
+          className="text-[10px] font-mono px-2 py-0.5 rounded-full
+            bg-[#388bfd]/10 text-[#388bfd] border border-[#388bfd]/25">
+          {tag}
+        </span>
+      ))}
+    </div>
+  </div>
+);`,
     projects: ["All Projects"],
   },
   {
