@@ -98,10 +98,7 @@ export default function ContactSection() {
             onClick={(e) => handleClick(c, e)}
             className="group relative bg-[#161b22] border border-[#30363d] rounded-md p-5 hover:border-[#8b949e] transition-all hover:-translate-y-px block overflow-hidden"
           >
-            <div
-              className="absolute inset-x-0 top-0 h-[3px] rounded-t-md"
-              style={{ background: c.accent }}
-            />
+            <div className="absolute inset-x-0 top-0 h-[3px] rounded-t-md" />
             <div
               className={`w-10 h-10 rounded-lg ${c.iconBg} ${c.iconColor} flex items-center justify-center mb-3`}
             >

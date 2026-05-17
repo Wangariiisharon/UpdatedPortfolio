@@ -1,5 +1,7 @@
 import { Pin, BookOpen, ExternalLink } from "lucide-react";
 import ContribGraph from "./ContribGraph";
+import { GitHubCalendar } from "react-github-calendar";
+
 import { techStack, projects } from "../app/data";
 
 interface Props {
@@ -72,9 +74,9 @@ export default function OverviewSection({
           </p>
         </div>
       </div>
-
       {/* Contribution graph */}
-      <ContribGraph />
+      {/* <ContribGraph username="Wangariiisharon" joinYear={2022} />{" "} */}
+      <ContribGraph joinYear={2022} />
 
       {/* Pinned Project */}
       <div className="flex items-center gap-2 text-[13px] font-semibold text-[#8b949e] mb-3">
@@ -88,10 +90,7 @@ export default function OverviewSection({
             onClick={onPortfolioClick}
             className="group relative bg-[#161b22] border border-[#30363d] rounded-md p-4 flex flex-col gap-2 hover:border-[#8b949e] transition-all cursor-pointer overflow-hidden"
           >
-            <div
-              className="absolute inset-x-0 top-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity"
-              style={{ background: pinnedColors[i] }}
-            />
+            <div className="absolute inset-x-0 top-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="flex items-center gap-2">
               <BookOpen size={14} className="text-[#8b949e] shrink-0" />
               <span className="text-[#388bfd] text-[13px] font-semibold font-mono">

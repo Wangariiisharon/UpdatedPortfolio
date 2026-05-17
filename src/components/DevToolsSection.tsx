@@ -64,10 +64,7 @@ export default function DevToolsSection() {
             className="group relative bg-[#161b22] border border-[#30363d] rounded-md p-4 cursor-pointer hover:border-[#8b949e] transition-all hover:-translate-y-px overflow-hidden"
           >
             {/* Top accent */}
-            <div
-              className="absolute inset-x-0 top-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity"
-              style={{ background: tool.accent }}
-            />
+            <div className="absolute inset-x-0 top-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity" />
             {/* Icon */}
             <div
               className="w-8 h-8 rounded-md flex items-center justify-center text-lg mb-3"
