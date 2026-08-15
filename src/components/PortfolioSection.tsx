@@ -1,7 +1,52 @@
 "use client";
 import { useState } from "react";
-import { Search, ExternalLink } from "lucide-react";
+import { Search, ExternalLink, ChevronDown } from "lucide-react";
 import { projects } from "../app/data";
+
+function CustomSelect({
+  value,
+  options,
+}: {
+  value: string;
+  options: string[];
+}) {
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState(value);
+
+  return (
+    <div className="relative w-full sm:w-auto">
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        className="w-full sm:min-w-[160px] flex items-center justify-between gap-3 px-3 py-1.5 bg-[#21262d] border border-[#30363d] rounded-md text-[#f0f6fc] text-[12px] focus:outline-none cursor-pointer"
+      >
+        <span>{selected}</span>
+        <ChevronDown
+          size={13}
+          className={`transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {open && (
+        <div className="absolute z-50 left-0 right-0 mt-1 overflow-hidden bg-[#21262d] border border-[#30363d] rounded-md shadow-lg">
+          {options.map((option) => (
+            <button
+              key={option}
+              type="button"
+              onClick={() => {
+                setSelected(option);
+                setOpen(false);
+              }}
+              className="w-full text-left px-3 py-2 text-[12px] text-[#f0f6fc] hover:bg-[#30363d] cursor-pointer"
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function PortfolioSection() {
   const [query, setQuery] = useState("");
@@ -10,14 +55,8 @@ export default function PortfolioSection() {
     (p) =>
       p.name.toLowerCase().includes(query.toLowerCase()) ||
       p.desc.toLowerCase().includes(query.toLowerCase()) ||
-      p.stack.some((s) => s.toLowerCase().includes(query.toLowerCase()))
+      p.stack.some((s) => s.toLowerCase().includes(query.toLowerCase())),
   );
-
-  const dotColors: Record<string, string> = {
-    SongaTrack: "bg-[#3fb950]",
-    ContextAI: "bg-[#388bfd]",
-    "Norah Digital": "bg-[#d29922]",
-  };
 
   return (
     <div>
@@ -43,29 +82,25 @@ export default function PortfolioSection() {
             className="w-full pl-8 pr-4 py-1.5 bg-[#0d1117] border border-[#30363d] rounded-md text-[#f0f6fc] text-[13px] focus:outline-none focus:border-[#1f6feb] placeholder:text-[#8b949e] font-sans"
           />
         </div>
-        <select className="px-3 py-1.5 bg-[#21262d] border border-[#30363d] rounded-md text-[#f0f6fc] text-[12px] focus:outline-none cursor-pointer">
-          <option>All</option>
-          <option>Frontend</option>
-          <option>Full-stack</option>
-          <option>AI</option>
-        </select>
-        <select className="px-3 py-1.5 bg-[#21262d] border border-[#30363d] rounded-md text-[#f0f6fc] text-[12px] focus:outline-none cursor-pointer">
-          <option>Language: All</option>
-          <option>TypeScript</option>
-          <option>JavaScript</option>
-        </select>
+        <CustomSelect
+          value="All"
+          options={["All", "Frontend", "Full-stack", "AI"]}
+        />
+        <CustomSelect
+          value="Language: All"
+          options={["Language: All", "TypeScript", "JavaScript"]}
+        />
       </div>
 
       {/* Projects list */}
       <div className="divide-y divide-[#21262d]">
         {filtered.map((project) => (
           <div key={project.name} className="py-5 flex gap-4">
-            {/* Color dot */}
             <div
-              className={`w-3 h-3 rounded-full border-2 shrink-0 mt-1 ${dotColors[project.name] ? "border-current" : "border-[#3fb950]"}`}
+              className="w-3 h-3 rounded-full border-2 shrink-0 mt-1"
               style={{
-                borderColor: project.accentColor,
-                background: "transparent",
+                borderColor: "#3178C6",
+                backgroundColor: "#3178C6",
               }}
             />
 
@@ -91,7 +126,7 @@ export default function PortfolioSection() {
                   {project.stack.map((tag) => (
                     <span
                       key={tag}
-                      className={`text-[11px] font-mono px-2 py-0.5 rounded-full border ${project.stackColors[tag] ?? ""}`}
+                      className="text-[11px] font-mono px-2 py-0.5 rounded-full border bg-gray-800 text-gray-200 border-gray-700"
                     >
                       {tag}
                     </span>

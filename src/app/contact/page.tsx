@@ -48,7 +48,7 @@ export default function Contact() {
                 href={link.url}
                 target={link.url.startsWith("http") ? "_blank" : "_self"}
                 rel={link.url.startsWith("http") ? "noopener noreferrer" : ""}
-                className={`group relative border border-gray-800 rounded-lg bg-[#010409] ${link.hoverColor} transition-all hover:shadow-lg overflow-hidden`}
+                className={`group relative bg-transparent border border-gray-800 rounded-lg  ${link.hoverColor} transition-all hover:shadow-lg overflow-hidden`}
                 onClick={(e) => {
                   if (link.name === "Resume") {
                     e.preventDefault(); // Prevent default link behavior

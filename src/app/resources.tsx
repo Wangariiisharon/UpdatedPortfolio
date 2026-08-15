@@ -101,21 +101,22 @@ export const projects = [
   },
   {
     id: 5,
-    name: "LaunchKit",
-    dot: "#fbbf24",
+    name: "VidMetrics",
 
     description:
-      "Its a SaaS Starter Kit designed to jumpstart product development. It comes with certain features so that users don't have to write the boilerplate code, instead you could focus on building the core feature! It includes user authentication, role-based access control, a permission system, and a customizable dashboard. The kit is built with Next.js, Tailwind CSS, TypeScript, and Firbase.",
+      "VidMetrics is a web app that allows users to analyse their competitors Youtube chanels by giving metrics such as total likes, comments, engagement rate and many more.",
     visibility: false,
-    updated: "Feb 2025",
+    updated: "March 2026",
     tags: [
       "Next.js",
       "React",
       "TailwindCSS",
       "Framer Motion",
-      "Vercel, Firbase",
+      "Vercel",
+      "TypeScript",
+      "Youtube API",
     ],
-    link: "https://ecommerce-store-ivory.vercel.app",
+    link: "https://vid-metrics-nu.vercel.app/",
   },
   {
     id: 6,

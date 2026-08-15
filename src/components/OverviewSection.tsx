@@ -1,6 +1,5 @@
 import { Pin, BookOpen, ExternalLink } from "lucide-react";
-import ContribGraph from "./ContribGraph";
-import { GitHubCalendar } from "react-github-calendar";
+import SkillsRadar from "./skills";
 
 import { techStack, projects } from "../app/data";
 
@@ -8,8 +7,6 @@ interface Props {
   onContactClick: () => void;
   onPortfolioClick: () => void;
 }
-
-const pinnedColors = ["#3fb950", "#388bfd", "#d29922", "#8957e5"];
 
 export default function OverviewSection({
   onContactClick,
@@ -26,8 +23,8 @@ export default function OverviewSection({
   return (
     <div>
       {/* README card */}
-      <div className="bg-[#161b22] border border-[#30363d] rounded-md overflow-hidden mb-6">
-        <div className="flex items-center justify-between px-4 py-2.5 border-b border-[#21262d] bg-[#21262d]">
+      <div className="bg-transparent border border-gray-800 rounded-md overflow-hidden mb-6">
+        <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-800 bg-transparent">
           <div className="flex items-center gap-2 text-[13px] text-[#8b949e] font-mono">
             <BookOpen size={13} />
             <span>
@@ -56,14 +53,14 @@ export default function OverviewSection({
             Get in Touch
           </button>
 
-          <h3 className="text-sm font-semibold text-[#f0f6fc] mb-3 pb-2 border-b border-[#21262d]">
+          <h3 className="text-sm font-semibold text-[#f0f6fc] mb-3 pb-2 border-b border-gray-800">
             Technologies I&apos;ve Worked With
           </h3>
           <div className="flex flex-wrap gap-1.5 mb-6">
             {techStack.map((t) => (
               <div
                 key={t.label}
-                className={`px-2.5 py-0.5 rounded-full text-[11px] font-mono border ${t.color}`}
+                className={`px-2.5 py-0.5 rounded-full text-[11px] font-mono border border-gray-700 bg-transparent`}
               >
                 {t.label}
               </div>
@@ -76,7 +73,7 @@ export default function OverviewSection({
       </div>
       {/* Contribution graph */}
       {/* <ContribGraph username="Wangariiisharon" joinYear={2022} />{" "} */}
-      <ContribGraph joinYear={2022} />
+      {/* <ContribGraph joinYear={2022} /> */}
 
       {/* Pinned Project */}
       <div className="flex items-center gap-2 text-[13px] font-semibold text-[#8b949e] mb-3">
@@ -88,7 +85,7 @@ export default function OverviewSection({
           <div
             key={project.name}
             onClick={onPortfolioClick}
-            className="group relative bg-[#161b22] border border-[#30363d] rounded-md p-4 flex flex-col gap-2 hover:border-[#8b949e] transition-all cursor-pointer overflow-hidden"
+            className="group relative  border border-gray-700 bg-transparent rounded-md p-4 flex flex-col gap-2 hover:border-[#8b949e] transition-all cursor-pointer overflow-hidden"
           >
             <div className="absolute inset-x-0 top-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="flex items-center gap-2">
@@ -107,7 +104,7 @@ export default function OverviewSection({
               {project.stack.slice(0, 3).map((tag) => (
                 <span
                   key={tag}
-                  className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${project.stackColors[tag]}`}
+                  className="text-[10px] font-mono px-2 py-0.5 rounded-full border bg-gray-800 text-gray-200 border-gray-700"
                 >
                   {tag}
                 </span>
@@ -123,6 +120,7 @@ export default function OverviewSection({
           </div>
         ))}
       </div>
+      <SkillsRadar />
     </div>
   );
 }

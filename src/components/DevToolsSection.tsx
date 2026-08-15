@@ -39,7 +39,7 @@ export default function DevToolsSection() {
       </p>
 
       {/* Filter tabs */}
-      <div className="flex flex-wrap gap-1.5 mb-6 bg-[#21262d] border border-[#30363d] rounded-md p-1 w-fit max-w-full overflow-x-auto">
+      <div className="flex flex-wrap gap-1.5 mb-6 bg-transparent border border-gray-700 rounded-md p-1 w-fit max-w-full overflow-x-auto">
         {cats.map((cat) => (
           <button
             key={cat}
@@ -61,7 +61,7 @@ export default function DevToolsSection() {
           <div
             key={tool.name}
             onClick={() => setSelectedTool(tool)}
-            className="group relative bg-[#161b22] border border-[#30363d] rounded-md p-4 cursor-pointer hover:border-[#8b949e] transition-all hover:-translate-y-px overflow-hidden"
+            className="group relative bg-transparent border border-gray-800 rounded-md p-4 cursor-pointer hover:border-[#8b949e] transition-all hover:-translate-y-px overflow-hidden"
           >
             {/* Top accent */}
             <div className="absolute inset-x-0 top-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity" />

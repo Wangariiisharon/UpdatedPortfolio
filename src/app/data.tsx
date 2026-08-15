@@ -22,7 +22,6 @@ export interface Project {
   visibility: "Public" | "Private";
   desc: string;
   stack: string[];
-  stackColors: Record<string, string>;
   updated: string;
   accentColor: string;
   demo?: string;
@@ -503,14 +502,6 @@ export const projects: Project[] = [
       "Daisy UI",
     ],
 
-    stackColors: {
-      "Next.js": "text-[#f0f6fc] border-[#f0f6fc]/20 bg-[#f0f6fc]/5",
-      React: "text-[#61dafb] border-[#61dafb]/25 bg-[#61dafb]/7",
-      TypeScript: "text-[#388bfd] border-[#388bfd]/25 bg-[#388bfd]/7",
-      TailwindCSS: "text-[#38bdf8] border-[#38bdf8]/25 bg-[#38bdf8]/7",
-      "Node.js": "text-[#3fb950] border-[#3fb950]/25 bg-[#3fb950]/7",
-      Firebase: "text-[#fb8c00] border-[#fb8c00]/25 bg-[#fb8c00]/7",
-    },
     updated: "Aug 2025",
     accentColor: "#3fb950",
     demo: "https://app.songatrack.com/auth/sign-in?next=%2Fhome",
@@ -547,15 +538,6 @@ export const projects: Project[] = [
       "Supabase",
       "GeminiAI",
     ],
-    stackColors: {
-      "Next.js": "text-[#f0f6fc] border-[#f0f6fc]/20 bg-[#f0f6fc]/5",
-      React: "text-[#61dafb] border-[#61dafb]/25 bg-[#61dafb]/7",
-      TypeScript: "text-[#388bfd] border-[#388bfd]/25 bg-[#388bfd]/7",
-      TailwindCSS: "text-[#38bdf8] border-[#38bdf8]/25 bg-[#38bdf8]/7",
-      "Node.js": "text-[#3fb950] border-[#3fb950]/25 bg-[#3fb950]/7",
-      Supabase: "text-[#3ecf8e] border-[#3ecf8e]/25 bg-[#3ecf8e]/7",
-      GeminiAI: "text-[#a78bfa] border-[#a78bfa]/25 bg-[#a78bfa]/7",
-    },
     updated: "Mar 2026",
     accentColor: "#388bfd",
     demo: "https://contextai-ivory.vercel.app/",
@@ -565,13 +547,6 @@ export const projects: Project[] = [
     visibility: "Public",
     desc: "I built the Norah Digital company website with Next.js for performance, scalability, and SEO. For flexibility, I paired this setup with Sanity CMS and Resend",
     stack: ["Next.js", "TypeScript", "TailwindCSS", "Sanity", "Resend"],
-    stackColors: {
-      "Next.js": "text-[#f0f6fc] border-[#f0f6fc]/20 bg-[#f0f6fc]/5",
-      TypeScript: "text-[#388bfd] border-[#388bfd]/25 bg-[#388bfd]/7",
-      TailwindCSS: "text-[#38bdf8] border-[#38bdf8]/25 bg-[#38bdf8]/7",
-      Sanity: "text-[#f47166] border-[#f47166]/25 bg-[#f47166]/7",
-      Resend: "text-[#ec6547] border-[#ec6547]/25 bg-[#ec6547]/7",
-    },
     updated: "2025",
     accentColor: "#d29922",
     demo: "https://www.norahdigital.com/",
@@ -581,22 +556,15 @@ export const projects: Project[] = [
     visibility: "Public",
     desc: "ElevateWell Kenya offers personalized mobile IV drip therapy services to help individuals rehydrate, recharge, and reclaim energy with doctor-formulated nutrient infusions delivered straight to your door, backed by FAQs and contact information for booking and support.",
     stack: ["Next.js", "TypeScript", "TailwindCSS", "Sanity", "Resend"],
-    stackColors: {
-      "Next.js": "text-[#f0f6fc] border-[#f0f6fc]/20 bg-[#f0f6fc]/5",
-      TypeScript: "text-[#388bfd] border-[#388bfd]/25 bg-[#388bfd]/7",
-      TailwindCSS: "text-[#38bdf8] border-[#38bdf8]/25 bg-[#38bdf8]/7",
-      Sanity: "text-[#f47166] border-[#f47166]/25 bg-[#f47166]/7",
-      Resend: "text-[#ec6547] border-[#ec6547]/25 bg-[#ec6547]/7",
-    },
     updated: "2025",
     accentColor: "#d29922",
     demo: "https://www.elevatewellke.com/",
   },
 
   {
-    name: "LaunchKit",
+    name: "VidMetrics",
     visibility: "Public",
-    desc: "Its a SaaS Starter Kit designed to jumpstart product development. It comes with certain features so that users don't have to write the boilerplate code, instead you could focus on building the core feature! It includes user authentication, role-based access control, a permission system, and a customizable dashboard. The kit is built with Next.js, Tailwind CSS, TypeScript, and Firbase.",
+    desc: "VidMetrics is a web app that allows users to analyse their competitors Youtube chanels by giving metrics such as total likes, comments, engagement rate and many more.",
     stack: [
       "Next.js",
       "TypeScript",
@@ -605,17 +573,11 @@ export const projects: Project[] = [
       "Framer Motion",
       "Firbase",
       "Vercel",
+      "Youtube API",
     ],
-    stackColors: {
-      "Next.js": "text-[#f0f6fc] border-[#f0f6fc]/20 bg-[#f0f6fc]/5",
-      TypeScript: "text-[#388bfd] border-[#388bfd]/25 bg-[#388bfd]/7",
-      TailwindCSS: "text-[#38bdf8] border-[#38bdf8]/25 bg-[#38bdf8]/7",
-      Sanity: "text-[#f47166] border-[#f47166]/25 bg-[#f47166]/7",
-      Resend: "text-[#ec6547] border-[#ec6547]/25 bg-[#ec6547]/7",
-    },
-    updated: "2025",
+    updated: "March 2026",
     accentColor: "#d29922",
-    demo: "https://summerix.vercel.app/auth/sign-in",
+    demo: "https://vid-metrics-nu.vercel.app/",
   },
 ];
 

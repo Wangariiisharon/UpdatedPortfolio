@@ -16,7 +16,7 @@ const LinkedinIcon = () => (
 
 export default function Sidebar() {
   return (
-    <aside className="w-full md:w-[280px] lg:w-[296px] shrink-0 md:sticky md:top-[62px] md:h-[calc(100vh-62px)] md:overflow-y-auto md:border-r md:border-[#21262d] px-4 md:px-5 py-5 md:py-6">
+    <aside className="w-full md:w-[280px] lg:w-[296px] shrink-0 md:h-full px-4 md:px-5 py-5 md:py-6">
       {/* Avatar */}
       <div className="relative w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full border-2 border-[#30363d] overflow-hidden mb-4 mx-auto md:mx-0">
         <div className="w-full h-full flex items-center justify-center l">
@@ -29,26 +29,22 @@ export default function Sidebar() {
           />
         </div>
       </div>
-
       <h1 className="text-xl md:text-2xl font-semibold text-[#f0f6fc] leading-tight mb-1 text-center md:text-left">
         Sharon Mwangi
       </h1>
       <p className="text-lg md:text-xl font-light text-[#8b949e] mb-3 text-center md:text-left">
         Software Engineer
       </p>
-
       <p className="text-sm text-[#c9d1d9] leading-relaxed mb-4 border-l-2 border-[#238636] pl-3">
         Software Engineer with a deep passion for computer science. Currently
         working on cool web and mobile projects.
       </p>
-
       <button
         onClick={() => window.dispatchEvent(new Event("open-chatbot"))}
-        className="w-full py-1.5 px-4 bg-[#21262d] border border-[#30363d] rounded-md text-[#f0f6fc] text-sm font-medium hover:bg-[#2d333b] hover:border-[#8b949e] transition-all mb-4 cursor-pointer"
+        className="w-full py-1.5 px-4 bg-[#212830] border border-[#30363d] rounded-md text-[#f0f6fc] text-sm font-medium hover:bg-[#2d333b] hover:border-[#8b949e] transition-all mb-4 cursor-pointer"
       >
         Ask Copilot
       </button>
-
       <div className="flex gap-4 mb-4 text-sm justify-center md:justify-start">
         <span className="text-[#8b949e]">
           <strong className="text-[#f0f6fc] font-semibold">50+</strong> repos
@@ -57,7 +53,6 @@ export default function Sidebar() {
           <strong className="text-[#f0f6fc] font-semibold">4</strong> projects
         </span>
       </div>
-
       <div className="space-y-1.5 mb-5">
         {[
           {
@@ -111,8 +106,7 @@ export default function Sidebar() {
           </div>
         ))}
       </div>
-
-      <p className="text-[11px] font-semibold text-[#8b949e] uppercase tracking-widest mb-2">
+      {/* <p className="text-[11px] font-semibold text-[#8b949e] uppercase tracking-widest mb-2">
         Tech Stack
       </p>
       <div className="flex flex-wrap gap-1.5">
@@ -124,7 +118,7 @@ export default function Sidebar() {
             {t.label}
           </span>
         ))}
-      </div>
+      </div> */}
     </aside>
   );
 }

@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-terminal bg-[#080810]">
-        {children}
+        <AppLayout>{children}</AppLayout>
         <ChatBot />
       </body>
     </html>
