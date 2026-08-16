@@ -40,7 +40,7 @@ export default function Sidebar() {
         working on cool web and mobile projects.
       </p>
       <button
-        onClick={() => window.open("/resume.pdf", "_blank")}
+        onClick={() => window.open("/Sharon_Mwangi_CV_.pdf", "_blank")}
         className="w-full py-1.5 px-4 bg-[#212830] border border-[#30363d] rounded-md text-[#f0f6fc] text-sm font-medium hover:bg-[#2d333b] hover:border-[#8b949e] transition-all mb-4 cursor-pointer"
       >
         View Resume
